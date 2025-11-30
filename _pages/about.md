@@ -24,5 +24,5 @@ latest_posts:
 
 **_Open to research internships and collaborative research opportunities._**
 
-#### Research Interests
-**Large Language Models (LLMs)**, **Metaheuristic optimization methods**, **Multimodality**, and **Multilingual NLP**.
+### Research Interests
+**Large Language Models (LLMs)**, **Metaheuristic Algorithms**, **Multimodality**, and **Multilingual NLP**.
