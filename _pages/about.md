@@ -4,7 +4,7 @@ title: About
 permalink: /
 subtitle: AI Engineering & Research
 profile:
-  align: right
+  align: left
   image: DP.jpg
   image_circular: true
   more_info: >
