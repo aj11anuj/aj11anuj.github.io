@@ -1502,3 +1502,12 @@ mjx-container[jax="CHTML"][display="true"] {
   font-size: 0.9em;
 }
 
+.profile img {
+  display: block;
+  margin: 0 auto;        // center in its column
+  max-width: 190px;      // shrink a bit if you want
+  border-radius: 16px;   // rounded rectangle
+  // border-radius: 50%; // use this instead for a circle
+}
+
+
