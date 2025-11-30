@@ -4,9 +4,9 @@ title: About
 permalink: /
 subtitle: AI Engineering & Research
 profile:
-  align: left
+  align: right
   image: DP.jpg
-  image_circular: true
+  image_circular: false
   more_info: >
     <p class="address">Delhi, India (Remote)</p>
 selected_papers: false # includes a list of papers marked as "selected={true}"
