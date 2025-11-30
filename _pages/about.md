@@ -23,8 +23,8 @@ latest_posts:
 <p style="text-align: justify;"> Pre-final year <a href="https://en.wikipedia.org/wiki/Bachelor_of_Technology" target="_blank" title="Bachelor of Technology">B.Tech</a> undergrad in Artificial Intelligence at <a href="https://www.niet.co.in/" target="_blank" title="NIET">Noida Institute of Engineering and Technology</a>, researching under PhD researcher <a href="https://www.researchgate.net/profile/Inam-Haq-14" target="_blank" title="Prof. Inam Ul Haq">Inam Ul Haq</a>. I’m driven by the ambition to create real-world impact through technology. I believe growth happens through rapid experimentation and hands-on execution. My curiosity has led me to explore and work across multiple domains from implementing ML models to prototyping MVPs. I approach challenges through practical experimentation, research, and iterative problem-solving. </p>
 
 **_Open to research internships and collaborative research opportunities._**
-<br>
+<br><br>
 #### Research Interests
 **Large Language Models (LLMs)**, **Metaheuristic Algorithms**, **Multimodality**, and **Multilingual NLP**.
-<br>
+<br><br>
 #### Timeline
