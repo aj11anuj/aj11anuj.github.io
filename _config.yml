@@ -3,7 +3,7 @@ first_name: Anuj
 middle_name:
 last_name: Tiwari
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach out to me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 keywords: Applied AI Engineer, AI Researcher, academic-website, portfolio-website # add your own keywords or leave empty
