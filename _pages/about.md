@@ -48,7 +48,7 @@ latest_posts:
    _Data collected & curated_
    <br>
    <a href="#" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">Dataset</a>
-   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
+   <a href="https://www.researchgate.net/publication/396813714_Campus_Food_Habits_Delivery_Preferences" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
    <br><br>
 4. **Hairstyle survey dataset**  
    Anuj Tiwari  
