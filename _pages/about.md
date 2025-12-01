@@ -28,8 +28,4 @@ latest_posts:
 **Large Language Models (LLMs)**, **Metaheuristic Algorithms**, **Multimodality**, and **Multilingual NLP**.
 <br><br>
 #### Publications
-##### 2025
-1. {% bibliography --query @*[selected=true] --template bib_selected %}
-<br><br>
-
-#### Miscellaneous
+{% bibliography -q @*[selected=true] %}
