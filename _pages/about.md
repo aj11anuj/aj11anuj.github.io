@@ -26,13 +26,8 @@ latest_posts:
 <br><br>
 #### Research Interests
 **Large Language Models (LLMs)**, **Metaheuristic Algorithms**, **Multimodality**, and **Multilingual NLP**.
-<!--<br><br>
+<br><br>
 #### Publications
-<br><br>
-#### Open-source Contributions
-<br><br>
-#### Projects
+{% bibliography -q @*[selected=true] %}
 <br><br>
 #### Miscellaneous
-<br><br>
-#### Timeline-->
