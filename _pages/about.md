@@ -29,55 +29,26 @@ latest_posts:
 <br><br>
 #### Publications
 ##### 2025
-1. <span class="badge badge-primary" style="font-size:0.9rem; padding:0.32rem 0.8rem; border-radius:10px;">Preprint</span>  
+1. <span class="badge badge-primary" style="font-size:0.7rem; padding:0.20rem 0.6; border-radius:15px;">Preprint</span>  
    **Comparative Evaluation of Nature-Inspired Algorithms for Hyperparameter Optimization in Machine Learning Models**  
    Anuj Tiwari, Inam Ul Haq, Pramod Singh Rathore, and Abhishek Kumar  
    _Under review at Discover Computing (Springer Nature)_
    <br>
-      <details style="display:inline;">
-     <summary class="btn btn-sm btn-outline-light" style="display:inline-block; margin-right:0.5rem; cursor:pointer;">
-       Abstract
-     </summary>
-     <div style="margin-top:0.35rem; max-width: 40rem;">
-       <p style="margin-bottom:0;">
-         Effective hyperparameter optimization is a common method for improving the performance of machine learning models
-         and is a key aspect of enhancing their efficiency and generalization ability. In this work, we investigate the
-         hyperparameter optimization of two popular models, Random Forest and Support Vector Machine (SVM), using three
-         nature-inspired optimization algorithms: Bald Eagle Optimization (BEO), Particle Swarm Optimization (PSO), and
-         Mother Tree Optimization (MTO). We evaluate these algorithms across five different datasets, including both image
-         and tabular data, to rigorously assess their performance and the transferability of the findings across diverse
-         settings. Our results show that Optuna delivers predictable and stable performance across a variety of evaluation
-         metrics, particularly in balancing accuracy and computational efficiency, while the nature-inspired optimizers
-         exhibit dataset-specific behavior, performing strongly in certain scenarios but inconsistently overall. The study
-         highlights that no single optimizer can be universally recommended; instead, each method offers distinct advantages
-         depending on dataset characteristics and model requirements, providing practical insights for real-world
-         hyperparameter tuning in machine learning.
-       </p>
-     </div>
-   </details>
    <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-light">View</a>
-
-   <div style="display:flex; align-items:center; gap:0.6rem; margin-top:0.6rem;">
-
-  <details style="display:inline-block; margin:0;">
-    <summary class="btn btn-sm btn-outline-light"
-             style="display:inline-block; cursor:pointer; padding:0.38rem 0.8rem; margin:0;">
-      Abstract
-    </summary>
-
-    <div style="margin-top:0.5rem; max-width:40rem;">
-      <p style="margin:0;">
-        Effective hyperparameter optimization is a common method for improving the performance of machine learning models…
-      </p>
-    </div>
-  </details>
-
-  <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models"
-     target="_blank"
-     class="btn btn-sm btn-outline-light"
-     style="display:inline-block; padding:0.38rem 0.8rem; margin:0; text-decoration:none;">
-    Read
-  </a>
-
-</div>
+2. <span class="badge badge-primary" style="font-size:0.7rem; padding:0.20rem 0.6; border-radius:15px;">Code</span>  
+   **Benchmarking Gemma-3 Series Models on EMMA-mini Coding Tasks for Evaluation of Multimodal Reasoning Capabilities**  
+   Anuj Tiwari  
+   _Paper Implementation_
+   <br>
+   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm btn-outline-light">View</a>
+3. <span class="badge badge-primary" style="font-size:0.7rem; padding:0.20rem 0.6; border-radius:15px;">Dataset</span>  
+   **Campus Food Habits & Delivery Preferences**  
+   Anuj Tiwari, Adeeba Irfan
+   <br>
+   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm btn-outline-light">View</a>
+4. <span class="badge badge-primary" style="font-size:0.7rem; padding:0.20rem 0.6; border-radius:15px;">Dataset</span>  
+   **Hairstyle survey dataset**  
+   Anuj Tiwari
+   <br>
+   <a href="https://www.researchgate.net/publication/396199276_Hairstyle_survey_dataset" target="_blank" class="btn btn-sm btn-outline-light">View</a>
 
