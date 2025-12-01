@@ -38,7 +38,7 @@ latest_posts:
      <summary class="btn btn-sm btn-outline-light" style="display:inline-block; margin-right:0.5rem; cursor:pointer;">
        Abstract
      </summary>
-     <div style="margin-top:0.5rem; max-width: 60rem;">
+     <div style="margin-top:0.35rem; max-width: 40rem;">
        <p style="margin-bottom:0;">
          Effective hyperparameter optimization is a common method for improving the performance of machine learning models
          and is a key aspect of enhancing their efficiency and generalization ability. In this work, we investigate the
@@ -55,4 +55,29 @@ latest_posts:
        </p>
      </div>
    </details>
-   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-light">Read</a>
+   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-light">View</a>
+
+   <div style="display:flex; align-items:center; gap:0.6rem; margin-top:0.6rem;">
+
+  <details style="display:inline-block; margin:0;">
+    <summary class="btn btn-sm btn-outline-light"
+             style="display:inline-block; cursor:pointer; padding:0.38rem 0.8rem; margin:0;">
+      Abstract
+    </summary>
+
+    <div style="margin-top:0.5rem; max-width:40rem;">
+      <p style="margin:0;">
+        Effective hyperparameter optimization is a common method for improving the performance of machine learning models…
+      </p>
+    </div>
+  </details>
+
+  <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models"
+     target="_blank"
+     class="btn btn-sm btn-outline-light"
+     style="display:inline-block; padding:0.38rem 0.8rem; margin:0; text-decoration:none;">
+    Read
+  </a>
+
+</div>
+
