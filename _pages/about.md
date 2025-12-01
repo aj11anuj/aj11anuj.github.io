@@ -29,10 +29,11 @@ latest_posts:
 <br><br>
 #### Publications
 ##### 2025
-1. <span class="badge badge-primary">Preprint</span>  
+1. <span class="badge badge-primary" style="font-size:0.9rem; padding:0.32rem 0.8rem; border-radius:10px;">Preprint</span>  
    **Comparative Evaluation of Nature-Inspired Algorithms for Hyperparameter Optimization in Machine Learning Models**  
    Anuj Tiwari, Inam Ul Haq, Pramod Singh Rathore, and Abhishek Kumar  
-   _Under review at Discover Computing journal of Springer Nature_
+   _Under review at Discover Computing (Springer Nature)_
+   <br>
       <details style="display:inline;">
      <summary class="btn btn-sm btn-outline-light" style="display:inline-block; margin-right:0.5rem; cursor:pointer;">
        Abstract
@@ -54,4 +55,4 @@ latest_posts:
        </p>
      </div>
    </details>
-   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-light">Preprint</a>
+   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-light">Read</a>
