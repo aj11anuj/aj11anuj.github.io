@@ -33,28 +33,27 @@ latest_posts:
    Anuj Tiwari, Inam Ul Haq, Pramod Singh Rathore, and Abhishek Kumar  
    _Under review at Discover Computing (Springer Nature)_
    <br>
-   <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Preprint</a>
-   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+   <a href="#" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">Preprint</a>
+   <a href="https://www.researchgate.net/publication/396803191_How_Effective_are_Nature-Inspired_Optimisation_Techniques_in_Hyperparameter_Tuning_of_Machine_Learning_Models" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
    <br><br>
 2. **Benchmarking Gemma-3 Series Models on EMMA-mini Coding Tasks for Evaluation of Multimodal Reasoning Capabilities**  
    Anuj Tiwari  
    _Unofficial Paper Implementation_
    <br>
-   <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+   <a href="#" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">Code</a>
+   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
    <br><br>
 3. **Campus Food Habits & Delivery Preferences**  
    Anuj Tiwari, Adeeba Irfan  
    _Data collected & curated_
    <br>
-   <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Dataset</a>
-   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+   <a href="#" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">Dataset</a>
+   <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
    <br><br>
 4. **Hairstyle survey dataset**  
    Anuj Tiwari  
    _Data collected & curated_
    <br>
-   <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Dataset</a>
-   <a href="https://www.researchgate.net/publication/396199276_Hairstyle_survey_dataset" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+   <a href="#" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">Dataset</a>
+   <a href="https://www.researchgate.net/publication/396199276_Hairstyle_survey_dataset" target="_blank" class="btn btn-sm" style="border: 2px solid #29B6F6; color: #29B6F6; background: transparent;">View</a>
    <br><br>
-
