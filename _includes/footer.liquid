@@ -24,9 +24,21 @@
       {% include newsletter.liquid %}
     {% endif %}
 
-    <div class="container">
-      {% include social.liquid %}
-      {{ footer_contents }}
-    </div>
+    <div class="container" style="text-align:center;">
+  
+  <div class="footer-socials" style="margin-bottom: 0.8rem;">
+    {% include social.liquid %}
+  </div>
+
+  {{ footer_contents }}
+
+</div>
+<style>
+  .footer-socials i {
+    font-size: 1.4rem !important;
+    margin: 0 0.35rem;
+    vertical-align: middle;
+  }
+</style>
   </footer>
 {% endif %}
