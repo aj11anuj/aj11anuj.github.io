@@ -1530,6 +1530,69 @@ body.show-small-title header::after, body.show-small-title nav::after {
   opacity:1;
   transform:translateY(0);
 }
+/* ===== custom navbar + hide theme toggle ===== */
+
+/* hide lots of possible toggle selectors used by al-folio forks */
+.theme-toggle,
+.mode-toggle,
+.color-mode-toggle,
+.theme-switcher,
+.dark-mode-toggle,
+.color-mode,
+.toggle-theme,
+.toggle-dark,
+.toggle-mode,
+.header-menu,
+.header .mode-toggle,
+.header .theme-toggle,
+.navbar .mode-toggle,
+.navbar .theme-toggle,
+.site-nav .theme-toggle,
+.site-nav .mode-toggle,
+.icon-mode,
+.icon-theme,
+button[aria-label*="theme"],
+button[aria-label*="mode"] {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* small-site-title (will be injected by JS) */
+.small-site-title {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  opacity: 0;
+  transition: opacity .22s ease, transform .22s ease;
+  z-index: 9999;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(0,0,0,0.0); /* transparent background - change if needed */
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Bold first name via span elements inserted by JS */
+.small-site-title .fname { font-weight: 700; }
+.small-site-title .lname { font-weight: 400; }
+
+/* visible state toggled by JS by adding class on body */
+body.show-small-title .small-site-title {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* If the theme uses a top border/shadow for header, nudge the element down a little */
+@media (min-width: 640px) {
+  .small-site-title { top: 12px; }
+}
+
 
 
 
