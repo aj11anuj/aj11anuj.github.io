@@ -1509,4 +1509,27 @@ mjx-container[jax="CHTML"][display="true"] {
   // border-radius: 50%; // use this instead for a circle
 }
 
+/* hide theme nav links + toggle */
+header a, header .nav-item, .site-nav a, .theme-toggle, .mode-toggle, .header-menu, .nav-link {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* pseudo-element small title */
+header::after, nav::after {
+  content: "Anuj Tiwari";
+  display: block;
+  text-align:center;
+  font-size:1.05rem;
+  margin-top:.35rem;
+  opacity:0;
+  transform:translateY(-6px);
+  transition:opacity .2s ease, transform .2s ease;
+}
+body.show-small-title header::after, body.show-small-title nav::after {
+  opacity:1;
+  transform:translateY(0);
+}
+
+
 
