@@ -1,0 +1,95 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <!-- left spacer -->
+    <div class="nav-left"></div>
+
+    <!-- title shown only after scroll -->
+    <a class="small-site-title" href="{{ '/' | relative_url }}">
+      <span class="fname">Anuj</span>&nbsp;<span class="lname">Tiwari</span>
+    </a>
+
+    <!-- right spacer -->
+    <div class="nav-right"></div>
+  </div>
+
+  <!-- Inline CSS -->
+  <style>
+    .site-nav {
+      border: none;
+      background: transparent;
+      padding: 0.5rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* spacers prevent layout shift */
+    .nav-left, .nav-right {
+      min-width: 120px;
+      height: 1px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* hidden small title */
+    .small-site-title {
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity .20s ease, transform .20s ease;
+      font-size: 1.05rem;
+      text-decoration: none;
+      color: inherit;
+      letter-spacing: 0.2px;
+      pointer-events: auto;
+    }
+
+    .small-site-title .fname {
+      font-weight: 700;
+    }
+    .small-site-title .lname {
+      font-weight: 400;
+    }
+
+    /* show only after scroll */
+    body.show-small-title .small-site-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* hard-remove theme toggle + nav items if theme still injects them */
+    .site-nav .theme-toggle,
+    .site-nav .mode-toggle,
+    .site-nav .nav-item,
+    .site-nav .nav-link,
+    .header-menu,
+    .navbar,
+    .logo + .links {
+      display: none !important;
+    }
+  </style>
+
+  <!-- Inline JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector(
+        '.page-header, .hero, header.site-header, .site-hero'
+      ) || document.querySelector('header');
+
+      if (!header) return;
+
+      const observer = new IntersectionObserver(entries => {
+        const e = entries[0];
+        if (e.isIntersecting) {
+          document.body.classList.remove('show-small-title');
+        } else {
+          document.body.classList.add('show-small-title');
+        }
+      }, { threshold: 0 });
+
+      observer.observe(header);
+    });
+  </script>
+</nav>
