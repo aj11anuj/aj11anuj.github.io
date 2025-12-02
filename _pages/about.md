@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /about/
 subtitle: AI Engineering & Research
 profile:
   align: right
