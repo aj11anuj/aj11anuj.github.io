@@ -45,16 +45,6 @@ socials_in_search: false
 posts_in_search: false
 bib_search: false
 enable_footer_social: true
-exclude:
-  - _pages/projects.md
-  - _pages/blog.md
-  - _pages/repositories.md
-  - _pages/cv.md
-  - _pages/teaching.md
-  - _pages/people.md
-  - _pages/books.md
-  - _pages/dropdown.md
-  - _pages/news.md
 
 
 # Dimensions
@@ -196,6 +186,15 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _pages/projects.md
+  - _pages/blog.md
+  - _pages/repositories.md
+  - _pages/cv.md
+  - _pages/teaching.md
+  - _pages/people.md
+  - _pages/books.md
+  - _pages/dropdown.md
+  - _pages/news.md
 keep_files:
   - CNAME
   - .nojekyll
