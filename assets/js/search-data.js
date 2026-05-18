@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
+        },{id: "nav-development",
+          title: "Development",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/development/";
+          },
         },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
