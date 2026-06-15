@@ -120,6 +120,41 @@ function initResearchFilters() {
   });
 }
 
+// ===== PDF Modal Viewer =====
+function initPdfModal() {
+  const modal = document.getElementById('pdf-modal');
+  const iframe = document.getElementById('pdf-modal-iframe');
+  const closeBtn = document.getElementById('pdf-modal-close');
+  const backdrop = document.getElementById('pdf-modal-backdrop');
+  const posterBtn = document.getElementById('poster-btn');
+
+  if (!modal || !posterBtn) return;
+
+  function openModal() {
+    const pdfSrc = posterBtn.getAttribute('data-pdf');
+    iframe.src = pdfSrc;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('pdf-modal-open');
+  }
+
+  function closeModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('pdf-modal-open');
+    // Clear iframe after transition to free resources
+    setTimeout(() => { iframe.src = ''; }, 350);
+  }
+
+  posterBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+      closeModal();
+    }
+  });
+}
+
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
@@ -128,5 +163,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initScrollTop();
   initResearchFilters();
+  initPdfModal();
 });
-

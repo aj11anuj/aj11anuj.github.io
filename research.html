@@ -117,11 +117,11 @@
                   <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                   <polyline points="14 2 14 8 20 8" />
                 </svg> View</a>
-              <a href="github.com/aj11anuj/aj11anuj.github.io/assets/SemEval_Poster.pdf" class="btn btn--sm btn--outline" target="_blank"><svg width="12"
+              <button type="button" id="poster-btn" class="btn btn--sm btn--outline" data-pdf="assets/SemEval_Poster.pdf"><svg width="12"
                   height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
                   <polygon points="5 3 19 12 5 21 5 3" />
-                </svg> Poster</a>
+                </svg> Poster</button>
             </div>
           </div>
         </div>
@@ -220,6 +220,34 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div class="pdf-modal" id="pdf-modal" aria-hidden="true">
+      <div class="pdf-modal__backdrop" id="pdf-modal-backdrop"></div>
+      <div class="pdf-modal__container">
+        <div class="pdf-modal__header">
+          <h3 class="pdf-modal__title">SemEval Poster</h3>
+          <div class="pdf-modal__actions">
+            <a id="pdf-modal-external" href="assets/SemEval_Poster.pdf" target="_blank" class="btn btn--sm btn--outline" title="Open in new tab">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+            <button type="button" class="pdf-modal__close" id="pdf-modal-close" aria-label="Close PDF viewer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="pdf-modal__body">
+          <iframe id="pdf-modal-iframe" class="pdf-modal__iframe" title="PDF Viewer"></iframe>
+        </div>
+      </div>
     </div>
   </main>
 
