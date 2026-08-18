@@ -81,7 +81,7 @@ function initScrollTop() {
 // ===== Research Filters =====
 function initResearchFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card[data-category]');
+  const cards = document.querySelectorAll('.brutal-item[data-category]');
   const sections = document.querySelectorAll('.section');
 
   if (filterBtns.length === 0) return;
@@ -106,7 +106,7 @@ function initResearchFilters() {
 
       // Filter sections (hide sections with no visible cards)
       sections.forEach(section => {
-        const sectionCards = section.querySelectorAll('.card[data-category]');
+        const sectionCards = section.querySelectorAll('.brutal-item[data-category]');
         if (sectionCards.length === 0) return; // Skip sections without filterable cards
 
         const hasVisibleCards = Array.from(sectionCards).some(card => !card.classList.contains('hidden'));
