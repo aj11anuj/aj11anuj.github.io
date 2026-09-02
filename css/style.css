@@ -1766,12 +1766,18 @@ body.pdf-modal-open {
 }
 
 @media (max-width: 650px) {
-  .profile-media {
-    width: 85%;
-    max-width: 320px;
+  .academic-profile__photo .profile-media,
+  .academic-profile__content .profile-media,
+  a.profile-media {
+    width: 92%;
+    max-width: 380px;
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
+  }
+  
+  a.profile-media {
+    text-align: center;
   }
 }
 
