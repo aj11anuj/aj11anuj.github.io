@@ -1770,7 +1770,7 @@ body.pdf-modal-open {
   .academic-profile__content .profile-media,
   a.profile-media {
     width: 92%;
-    max-width: 380px;
+    max-width: 440px;
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
