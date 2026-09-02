@@ -1765,7 +1765,7 @@ body.pdf-modal-open {
   width: 80%;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
   .academic-profile__photo .profile-media,
   .academic-profile__content .profile-media,
   a.profile-media {
