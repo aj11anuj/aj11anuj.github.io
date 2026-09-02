@@ -1776,10 +1776,11 @@ body.pdf-modal-open {
   }
   
   a.profile-media {
-    width: fit-content;
+    width: max-content !important;
+    max-width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    display: block !important;
+    display: table !important;
     text-align: center;
   }
 }
