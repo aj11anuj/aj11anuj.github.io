@@ -21,18 +21,47 @@
     .publication-thumbnail {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: auto;
+      max-height: 480px;
       object-fit: contain;
       object-position: center;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      margin-bottom: 1.25rem;
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      margin-top: 0.85rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+      cursor: zoom-in;
     }
 
-    @media (max-width: 600px) {
+    [data-theme="light"] .publication-thumbnail {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .publication-thumbnail:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .publication-media-link {
+      display: block;
+      text-decoration: none;
+      outline: none;
+      border-radius: 10px;
+    }
+
+    .publication-media-link:focus-visible .publication-thumbnail {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 768px) {
       .publication-thumbnail {
-        aspect-ratio: 4 / 3;
+        max-height: 320px;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
       }
     }
   </style>
@@ -98,12 +127,6 @@
           <!-- Paper 1 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
 
-            <img
-              class="publication-thumbnail"
-              src="assets/2606.03219v1-thumbnail.jpg"
-              alt="Visual summary of Sample-Size Scaling of the African Languages NLI Evaluation"
-              loading="lazy">
-
             <h3 class="card__title">
               Sample-Size Scaling of the African Languages NLI Evaluation
             </h3>
@@ -133,6 +156,15 @@
 
             </div>
 
+            <a class="publication-media-link" href="assets/2606.03219v1-thumbnail.jpg" target="_blank"
+              rel="noopener noreferrer" title="View full-resolution visual summary">
+              <img
+                class="publication-thumbnail"
+                src="assets/2606.03219v1-thumbnail.jpg"
+                alt="Visual summary of Sample-Size Scaling of the African Languages NLI Evaluation"
+                loading="lazy">
+            </a>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               This work explores how varying sample sizes in natural language inference datasets impact evaluation
@@ -144,12 +176,6 @@
 
           <!-- Paper 2 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
-
-            <img
-              class="publication-thumbnail"
-              src="assets/2606.03304v1-thumbnail.jpg"
-              alt="Research overview of prompting strategies for African NLI"
-              loading="lazy">
 
             <h3 class="card__title">
               From Script to Semantics: Prompting Strategies for African NLI
@@ -180,6 +206,15 @@
 
             </div>
 
+            <a class="publication-media-link" href="assets/2606.03304v1-thumbnail.jpg" target="_blank"
+              rel="noopener noreferrer" title="View full-resolution visual summary">
+              <img
+                class="publication-thumbnail"
+                src="assets/2606.03304v1-thumbnail.jpg"
+                alt="Research overview of prompting strategies for African NLI"
+                loading="lazy">
+            </a>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               We investigate the effectiveness of different prompting strategies in zero-shot and few-shot NLI tasks for
@@ -191,12 +226,6 @@
 
           <!-- Paper 3 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
-
-            <img
-              class="publication-thumbnail"
-              src="assets/2606.03334v1-thumbnail.png"
-              alt="Research overview of prompt variants for polarization detection"
-              loading="lazy">
 
             <h3 class="card__title">
               Lingo_Research_Group at SemEval-2026 Task 9: Evaluating Prompt Variants for
@@ -227,6 +256,21 @@
                 Poster
               </button>
 
+            </div>
+
+            <a class="publication-media-link" href="assets/2606.03334v1-thumbnail.png" target="_blank"
+              rel="noopener noreferrer" title="View full-resolution visual summary">
+              <img
+                class="publication-thumbnail"
+                src="assets/2606.03334v1-thumbnail.png"
+                alt="Research overview of prompt variants for polarization detection"
+                loading="lazy">
+            </a>
+
+            <div class="card__summary"
+              style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
+              Our system description for SemEval-2026 Task 9 evaluates 12 distinct prompt variants across 22 languages
+              for polarization detection, achieving 4th place finishes in Subtasks 1 and 2.
             </div>
 
           </div>
