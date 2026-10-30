@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -7,12 +8,34 @@
   <title>Anuj Tiwari</title>
   <meta name="description"
     content="Research publications, manuscripts, and artifacts by Anuj Tiwari in multilingual NLP and multimodal systems.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=1.1">
+
+  <style>
+    /* Publication thumbnails */
+    .publication-thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      object-position: center;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .publication-thumbnail {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +46,7 @@
       <a href="index.html" class="navbar__brand">Anuj Tiwari</a>
 
       <div class="navbar__links" id="nav-links">
-        <a href="index.html" class="navbar__link ">Home</a>
+        <a href="index.html" class="navbar__link">Home</a>
         <a href="research.html" class="navbar__link navbar__link--active">Research</a>
         <a href="development.html" class="navbar__link">Development</a>
       </div>
@@ -41,259 +64,335 @@
 
   <main>
     <div class="container">
+
       <div class="page-header reveal">
         <h1 class="page-header__title">Research</h1>
-        <p class="page-header__desc">Peer-reviewed publications, ongoing manuscripts, and research artifacts in
-          multilingual NLP and multimodal systems.</p>
+        <p class="page-header__desc">
+          Peer-reviewed publications, ongoing manuscripts, and research artifacts in
+          multilingual NLP and multimodal systems.
+        </p>
       </div>
 
       <!-- Publications -->
       <section class="section" id="publications">
+
         <div class="section__header reveal">
-          <h2 class="section__title"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                 <polyline points="14 2 14 8 20 8" />
                 <line x1="16" x2="8" y1="13" y2="13" />
                 <line x1="16" x2="8" y1="17" y2="17" />
                 <polyline points="10 9 9 9 8 9" />
-              </svg></span> Publications</h2>
+              </svg>
+            </span>
+            Publications
+          </h2>
           <div class="section__divider"></div>
         </div>
+
         <div class="cards-grid cards-grid--1">
+
+          <!-- Paper 1 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
-            <h3 class="card__title">Sample-Size Scaling of the African Languages NLI Evaluation</h3>
-            <p class="card__authors">Anuj Tiwari, Oluwapelumi Ogunremu, Terry Oko-odion, and 2 Others</p>
+
+            <img
+              class="publication-thumbnail"
+              src="assets/2606.03219v1-thumbnail.jpg"
+              alt="Visual summary of Sample-Size Scaling of the African Languages NLI Evaluation"
+              loading="lazy">
+
+            <h3 class="card__title">
+              Sample-Size Scaling of the African Languages NLI Evaluation
+            </h3>
+
+            <p class="card__authors">
+              Anuj Tiwari, Oluwapelumi Ogunremu, Terry Oko-odion, and 2 Others
+            </p>
+
             <p class="card__venue">AfricaNLP Workshop, EACL'26</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
-              <a href="https://arxiv.org/abs/2606.03219" class="btn btn--sm btn--outline" target="_blank"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg> arXiv</a>
-              <a href="https://youtu.be/walYsbmC-os" class="btn btn--sm btn--outline" target="_blank"><svg width="12"
-                  height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg> Video</a>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
+              <a href="https://arxiv.org/abs/2606.03219"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                arXiv
+              </a>
+
+              <a href="https://youtu.be/walYsbmC-os"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                Video
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               This work explores how varying sample sizes in natural language inference datasets impact evaluation
               performance across diverse African languages, highlighting critical thresholds for reliable benchmarking.
             </div>
+
           </div>
+
+
+          <!-- Paper 2 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
-            <h3 class="card__title">From Script to Semantics: Prompting Strategies for African NLI</h3>
-            <p class="card__authors">Anuj Tiwari, Terry Oko-odion, and Hannah Nwokocha</p>
+
+            <img
+              class="publication-thumbnail"
+              src="assets/2606.03304v1-thumbnail.jpg"
+              alt="Research overview of prompting strategies for African NLI"
+              loading="lazy">
+
+            <h3 class="card__title">
+              From Script to Semantics: Prompting Strategies for African NLI
+            </h3>
+
+            <p class="card__authors">
+              Anuj Tiwari, Terry Oko-odion, and Hannah Nwokocha
+            </p>
+
             <p class="card__venue">RAIL Workshop, LREC'26</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
-              <a href="https://arxiv.org/abs/2606.03304" class="btn btn--sm btn--outline" target="_blank"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg> arXiv</a>
-              <a href="https://youtu.be/kbuU14987Yg" class="btn btn--sm btn--outline" target="_blank"><svg width="12"
-                  height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg> Video</a>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
+              <a href="https://arxiv.org/abs/2606.03304"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                arXiv
+              </a>
+
+              <a href="https://youtu.be/kbuU14987Yg"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                Video
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               We investigate the effectiveness of different prompting strategies in zero-shot and few-shot NLI tasks for
-              African languages, demonstrating how structured semantics can bridge gaps in low-resource scripts.</div>
+              African languages, demonstrating how structured semantics can bridge gaps in low-resource scripts.
+            </div>
+
           </div>
+
+
+          <!-- Paper 3 -->
           <div class="card card--accent-gold reveal" data-category="workshop">
-            <h3 class="card__title">Lingo_Research_Group at SemEval-2026 Task 9: Evaluating Prompt Variants for
-              Polarization Detection</h3>
-            <p class="card__authors">Pritam Kadasi†, Anuj Tiwari†, and Mayank Singh</p>
+
+            <img
+              class="publication-thumbnail"
+              src="assets/2606.03334v1-thumbnail.png"
+              alt="Research overview of prompt variants for polarization detection"
+              loading="lazy">
+
+            <h3 class="card__title">
+              Lingo_Research_Group at SemEval-2026 Task 9: Evaluating Prompt Variants for
+              Polarization Detection
+            </h3>
+
+            <p class="card__authors">
+              Pritam Kadasi†, Anuj Tiwari†, and Mayank Singh
+            </p>
+
             <p class="card__venue">SemEval Workshop, ACL'26</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
-              <a href="https://arxiv.org/abs/2606.03334" class="btn btn--sm btn--outline" target="_blank"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg> arXiv</a>
-              <button type="button" id="poster-btn" class="btn btn--sm btn--outline"
-                data-pdf="assets/SemEval_Poster.pdf"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="margin-right:0.25rem;vertical-align:middle">
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg> Poster</button>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
+              <a href="https://arxiv.org/abs/2606.03334"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                arXiv
+              </a>
+
+              <button type="button" id="poster-btn"
+                class="btn btn--sm btn--outline"
+                data-pdf="assets/SemEval_Poster.pdf">
+                Poster
+              </button>
+
             </div>
+
           </div>
+
+
+          <!-- Book Chapter -->
           <div class="card card--accent-warm reveal" data-category="book-chapter">
-            <h3 class="card__title">Chapter: Case Studies in Data-Driven Sports Medicine</h3>
+
+            <h3 class="card__title">
+              Chapter: Case Studies in Data-Driven Sports Medicine
+            </h3>
+
             <p class="card__authors">Anuj Tiwari</p>
-            <p class="card__venue">Data-Driven Sports Medicine Book, Wiley Scrivener Publishing</p>
+
+            <p class="card__venue">
+              Data-Driven Sports Medicine Book, Wiley Scrivener Publishing
+            </p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
-              <a href="https://www.wiley.com/en-us/shop/general-introductory-statistics/data-driven-sports-medicine-p-9781394486441" class="btn btn--sm btn--outline" target="_blank"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg> View</a>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
+              <a href="https://www.wiley.com/en-us/shop/general-introductory-statistics/data-driven-sports-medicine-p-9781394486441"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                View
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               A comprehensive collection of case studies leveraging data-driven methodologies to enhance sports
               medicine. This chapter covers predictive modeling for injury prevention and optimized recovery tracking.
             </div>
+
           </div>
+
         </div>
       </section>
+
 
       <!-- Research Artifacts -->
       <section class="section" id="artifacts">
+
         <div class="section__header reveal">
-          <h2 class="section__title"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+                <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
                 <path d="M8.5 2h7" />
                 <path d="M7 16.5h10" />
-              </svg></span> Research Artifacts</h2>
+              </svg>
+            </span>
+            Research Artifacts
+          </h2>
           <div class="section__divider"></div>
         </div>
+
         <div class="cards-grid cards-grid--1">
 
           <div class="card card--accent-purple reveal" data-category="artifact">
-            <h3 class="card__title">Benchmarking Gemma-3 Series Models on EMMA-mini for Multimodal Reasoning</h3>
+
+            <h3 class="card__title">
+              Benchmarking Gemma-3 Series Models on EMMA-mini for Multimodal Reasoning
+            </h3>
+
             <p class="card__authors">Anuj Tiwari</p>
             <p class="card__venue">Code</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
               <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities"
-                class="btn btn--sm btn--outline" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg> View</a>
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                View
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               An extensive benchmarking study evaluating the latest Gemma-3 series models against the EMMA-mini dataset
-              to assess their capabilities and limitations in complex multimodal reasoning tasks.</div>
+              to assess their capabilities and limitations in complex multimodal reasoning tasks.
+            </div>
+
           </div>
+
+
           <div class="card card--accent-purple reveal" data-category="artifact">
+
             <h3 class="card__title">Campus Food Habits & Delivery Preferences</h3>
+
             <p class="card__authors">Anuj Tiwari and Adeeba Irfan</p>
             <p class="card__venue">Dataset</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
               <a href="https://www.researchgate.net/publication/396813714_Campus_Food_Habits_Delivery_Preferences"
-                class="btn btn--sm btn--outline" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg> View</a>
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                View
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               An empirical analysis of dietary patterns and food delivery preferences among university campus
-              populations, providing insights into nutritional trends and logistical demands.</div>
+              populations, providing insights into nutritional trends and logistical demands.
+            </div>
+
           </div>
+
+
           <div class="card card--accent-purple reveal" data-category="artifact">
+
             <h3 class="card__title">Hairstyle Survey</h3>
+
             <p class="card__authors">Anuj Tiwari</p>
             <p class="card__venue">Dataset</p>
+
             <div class="card__links">
+
               <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';"><svg
-                  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg> Gist</button>
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
               <a href="https://www.researchgate.net/publication/396199276_Hairstyle_survey_dataset"
-                class="btn btn--sm btn--outline" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="margin-right:0.25rem;vertical-align:middle">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg> View</a>
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                View
+              </a>
+
             </div>
+
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
               A comprehensive survey exploring the intersection of cultural hairstyles and computer vision, aiming to
-              create more inclusive datasets and unbiased facial recognition systems.</div>
+              create more inclusive datasets and unbiased facial recognition systems.
+            </div>
+
           </div>
+
         </div>
       </section>
+
+
       <!-- Academic Services -->
       <section class="section" id="academic-services">
+
         <div class="section__header reveal">
-          <h2 class="section__title"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
@@ -301,10 +400,15 @@
                 <path d="M12 16h4" />
                 <path d="M8 11h.01" />
                 <path d="M8 16h.01" />
-              </svg></span> Academic Services</h2>
+              </svg>
+            </span>
+            Academic Services
+          </h2>
           <div class="section__divider"></div>
         </div>
+
         <ul class="services-list reveal">
+
           <li class="services-list__item">
             <span class="services-list__bullet">▪</span>
             <div>
@@ -312,6 +416,7 @@
               <span class="services-list__venue"> AI Across Cultures Workshop, CHI 2026</span>
             </div>
           </li>
+
           <li class="services-list__item">
             <span class="services-list__bullet">▪</span>
             <div>
@@ -319,6 +424,7 @@
               <span class="services-list__venue"> SemEval Workshop, ACL 2026</span>
             </div>
           </li>
+
           <li class="services-list__item">
             <span class="services-list__bullet">▪</span>
             <div>
@@ -326,6 +432,7 @@
               <span class="services-list__venue"> RAIL Workshop, LREC 2026</span>
             </div>
           </li>
+
           <li class="services-list__item">
             <span class="services-list__bullet">▪</span>
             <div>
@@ -333,70 +440,106 @@
               <span class="services-list__venue"> Main Track, IndabaXNigeria 2026</span>
             </div>
           </li>
+
         </ul>
       </section>
 
+
       <!-- Recommendations -->
       <section class="section" id="recommendations">
+
         <div class="section__header reveal">
-          <h2 class="section__title"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
                 </path>
-              </svg></span> Recommendations</h2>
+              </svg>
+            </span>
+            Recommendations
+          </h2>
           <div class="section__divider"></div>
         </div>
+
         <div class="recommendation-list reveal">
 
+          <!-- Recommendation 1 -->
           <div class="recommendation-card">
+
             <div class="recommendation-header">
+
               <div class="recommendation-avatar">
-                <img src="assets/pritam.jpg" alt="Pritam Kadasi" style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/pritam.jpg" alt="Pritam Kadasi"
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
+
               <div class="recommendation-info">
-                <div class="recommendation-name">Pritam Kadasi
-                  <a href="https://pskadasi.github.io/" target="_blank" class="btn btn--sm btn--outline"
-                    style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">Profile <svg width="10" height="10"
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" style="margin-left:2px; vertical-align: middle;">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg></a>
+
+                <div class="recommendation-name">
+                  Pritam Kadasi
+
+                  <a href="https://pskadasi.github.io/" target="_blank"
+                    class="btn btn--sm btn--outline"
+                    style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
+                    Profile
+                  </a>
                 </div>
-                <div class="recommendation-title">AI Research Engineer at Logituit | PhD CS, IIT Gandhinagar</div>
-                <div class="recommendation-context">I managed Anuj directly</div>
+
+                <div class="recommendation-title">
+                  AI Research Engineer at Logituit | PhD CS, IIT Gandhinagar
+                </div>
+
+                <div class="recommendation-context">
+                  I managed Anuj directly
+                </div>
+
               </div>
             </div>
+
             <div class="recommendation-text" style="font-size: 0.8rem;">
               "Anuj designed the 12 prompt evaluation framework that is the basis of our SemEval Workshop work and also
               led the cross-lingual analysis explaining performance degradation across subtasks and languages. I'd
               highlight his instinct to look for reviewer concerns in particular, as he picked up on the majority of
               those concerns prior to submission, and the few that did come up were minor fixes."
             </div>
+
           </div>
 
+
+          <!-- Recommendation 2 -->
           <div class="recommendation-card">
+
             <div class="recommendation-header">
+
               <div class="recommendation-avatar">
-                <img src="assets/terry.jpg" alt="Terry Oko-odion" style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/terry.jpg" alt="Terry Oko-odion"
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
+
               <div class="recommendation-info">
-                <div class="recommendation-name">Terry Oko-odion
-                  <a href="https://terryoko.github.io/" target="_blank" class="btn btn--sm btn--outline"
-                    style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">Profile <svg width="10" height="10"
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" style="margin-left:2px; vertical-align: middle;">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg></a>
+
+                <div class="recommendation-name">
+                  Terry Oko-odion
+
+                  <a href="https://terryoko.github.io/" target="_blank"
+                    class="btn btn--sm btn--outline"
+                    style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
+                    Profile
+                  </a>
                 </div>
-                <div class="recommendation-title">Prospective Graduate Student | BSc CS, AAU Ekpoma</div>
-                <div class="recommendation-context">I worked with Anuj on the same team</div>
+
+                <div class="recommendation-title">
+                  Prospective Graduate Student | BSc CS, AAU Ekpoma
+                </div>
+
+                <div class="recommendation-context">
+                  I worked with Anuj on the same team
+                </div>
+
               </div>
             </div>
+
             <div class="recommendation-text" style="font-size: 0.8rem;">
               "I have worked with Anuj on various projects but here I want to highlight our EACL workshop paper in
               particular. Initially we were trying to expand AfriXNLI, but ran into problems getting the data from the
@@ -407,83 +550,134 @@
               then together we worked on it, which made the paper possible. That kind of pivot from a dead end to a more
               useful question is what makes Anuj worth collaborating with."
             </div>
+
           </div>
 
         </div>
       </section>
+
     </div>
+
 
     <!-- PDF Viewer Modal -->
     <div class="pdf-modal" id="pdf-modal" aria-hidden="true">
+
       <div class="pdf-modal__backdrop" id="pdf-modal-backdrop"></div>
+
       <div class="pdf-modal__container">
+
         <div class="pdf-modal__header">
           <h3 class="pdf-modal__title">SemEval Poster</h3>
+
           <div class="pdf-modal__actions">
-            <a id="pdf-modal-external" href="assets/SemEval_Poster.pdf" target="_blank" class="btn btn--sm btn--outline"
+
+            <a id="pdf-modal-external" href="assets/SemEval_Poster.pdf"
+              target="_blank" class="btn btn--sm btn--outline"
               title="Open in new tab">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
+
             </a>
-            <button type="button" class="pdf-modal__close" id="pdf-modal-close" aria-label="Close PDF viewer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+
+            <button type="button" class="pdf-modal__close"
+              id="pdf-modal-close" aria-label="Close PDF viewer">
+
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
+
             </button>
+
           </div>
         </div>
+
         <div class="pdf-modal__body">
-          <iframe id="pdf-modal-iframe" class="pdf-modal__iframe" title="PDF Viewer"></iframe>
+          <iframe id="pdf-modal-iframe"
+            class="pdf-modal__iframe" title="PDF Viewer"></iframe>
         </div>
+
       </div>
     </div>
+
   </main>
 
+
+  <!-- Footer -->
   <footer class="footer">
+
     <div class="container">
+
       <div class="footer__inner">
+
         <div class="footer__socials">
-          <a href="https://huggingface.co/aj11anuj" target="_blank" class="footer__social-link"
-            aria-label="Hugging Face" title="Hugging Face">
+
+          <a href="https://huggingface.co/aj11anuj" target="_blank"
+            class="footer__social-link" aria-label="Hugging Face"
+            title="Hugging Face">
+
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
-                d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624" />
+                d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642-.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624" />
             </svg>
+
           </a>
-          <a href="https://scholar.google.com/citations?user=Ax857YMAAAAJ&hl=en" target="_blank"
-            class="footer__social-link" aria-label="Google Scholar" title="Google Scholar">
+
+
+          <a href="https://scholar.google.com/citations?user=Ax857YMAAAAJ&hl=en"
+            target="_blank" class="footer__social-link"
+            aria-label="Google Scholar" title="Google Scholar">
+
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
             </svg>
+
           </a>
-          <a href="https://github.com/aj11anuj" target="_blank" class="footer__social-link" aria-label="GitHub"
-            title="GitHub">
+
+
+          <a href="https://github.com/aj11anuj" target="_blank"
+            class="footer__social-link" aria-label="GitHub" title="GitHub">
+
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653 3.285 2.38 3.285 3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653 3.285 2.38 3.285 3.176" />
             </svg>
+
           </a>
-          <a href="https://x.com/aj11anuj" target="_blank" class="footer__social-link" aria-label="X / Twitter"
+
+
+          <a href="https://x.com/aj11anuj" target="_blank"
+            class="footer__social-link" aria-label="X / Twitter"
             title="X / Twitter">
+
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
+
           </a>
+
         </div>
-        <p class="footer__text">Best way to reach me is <a href="mailto:aj11anuj123@gmail.com">via email</a>.</p>
+
+        <p class="footer__text">
+          Best way to reach me is
+          <a href="mailto:aj11anuj123@gmail.com">via email</a>.
+        </p>
+
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-</body>
 
+</body>
 </html>
