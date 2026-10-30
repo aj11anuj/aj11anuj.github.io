@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -15,6 +14,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=1.1">
+  <link rel="stylesheet" href="css/scale.css?v=2.5">
 
   <style>
     /* Publication thumbnails */
@@ -64,24 +64,214 @@
     .card:has(> .publication-media-link) {
       display: grid;
       grid-template-columns: minmax(300px, 46%) 1fr;
-      grid-template-rows: auto auto 1fr auto;
+      grid-template-rows: auto auto 1fr auto auto;
       column-gap: 1.75rem;
       align-items: start;
     }
 
-    .card:has(> .publication-media-link) > .publication-media-link {
+    .card:has(> .publication-media-link)>.publication-media-link {
       grid-column: 1;
-      grid-row: 1 / span 3;
+      grid-row: 1 / span 4;
     }
 
-    .card:has(> .publication-media-link) > .card__title,
-    .card:has(> .publication-media-link) > .card__authors,
-    .card:has(> .publication-media-link) > .card__venue {
+    .card:has(> .publication-media-link)>.card__title,
+    .card:has(> .publication-media-link)>.card__authors,
+    .card:has(> .publication-media-link)>.card__venue {
       grid-column: 2;
     }
 
-    .card:has(> .publication-media-link) > .card__summary {
+    .card:has(> .publication-media-link)>.card__title,
+    .card:has(> .publication-media-link)>.card__authors,
+    .card:has(> .publication-media-link)>.card__venue {
+      padding-right: 0;
+    }
+
+    .card:has(> .publication-media-link)>.card__title {
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .card:has(> .publication-media-link)>.card__authors {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .card:has(> .publication-media-link)>.card__venue {
+      font-size: 0.95rem;
+      align-self: end;
+      margin-bottom: 0;
+    }
+
+    .card:has(> .publication-media-link)>.card__links .btn {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.8rem;
+    }
+
+    /* Own name: bold, same colour as other authors, with a gold underline accent */
+    .author-me {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    /* Lighter card background (dark theme), same on every card, unchanged on hover */
+    :root:not([data-theme="light"]) .card,
+    :root:not([data-theme="light"]) .recommendation-card {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    [data-theme="light"] .card:hover {
+      background: var(--bg-card);
+    }
+
+    /* Page-wide type scale, matched to the larger publication cards */
+    .section__title {
+      font-size: 1.15rem;
+    }
+
+    .card__title {
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .card__authors,
+    .card__venue {
+      font-size: 0.95rem;
+    }
+
+    .card__authors {
+      color: var(--text-secondary);
+    }
+
+    .card__desc,
+    .card__desc ul li,
+    .card__summary {
+      font-size: 0.95rem !important;
+    }
+
+    .card__links .btn {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.8rem;
+    }
+
+    .cards-grid--1 .card__title,
+    .cards-grid--1 .card__authors,
+    .cards-grid--1 .card__venue {
+      padding-right: 290px;
+    }
+
+    .services-list__role {
+      font-size: 1.15rem;
+    }
+
+    .services-list__venue {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    /* Navbar */
+    .navbar__brand {
+      font-size: 2.4rem;
+      /* Script font has only one weight, so thicken strokes with a text outline */
+      -webkit-text-stroke: 1px currentColor;
+    }
+
+    .navbar__link {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    /* Footer */
+    .footer__text {
+      font-size: 1rem;
+    }
+
+    .footer__social-link {
+      width: 44px;
+      height: 44px;
+    }
+
+    .footer__social-link svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Page header */
+    .page-header__title {
+      font-size: 2rem;
+    }
+
+    .page-header__desc {
+      font-size: 1.05rem;
+      max-width: 640px;
+    }
+
+    /* Academic services */
+    .services-list__item {
+      padding: 0.1rem 0;
+      line-height: 1.35;
+      gap: 0.8rem;
+    }
+
+    .services-list__bullet {
+      font-size: 1.05rem;
+    }
+
+    /* Recommendations */
+    .recommendation-card {
+      padding: 1.5rem;
+    }
+
+    .recommendation-avatar {
+      width: 54px;
+      height: 54px;
+    }
+
+    .recommendation-name {
+      font-size: 1.15rem;
+    }
+
+    .recommendation-name .btn {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.8rem;
+    }
+
+    .recommendation-title {
+      font-size: 0.95rem;
+    }
+
+    .recommendation-context {
+      font-size: 0.9rem;
+    }
+
+    .recommendation-text {
+      font-size: 0.95rem !important;
+    }
+
+    /* Uniform image frame matching the SemEval (16:9) card; other images are enlarged and cropped to fill it */
+    .card:has(> .publication-media-link) .publication-thumbnail {
+      aspect-ratio: 1672 / 941;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Buttons sit in the text column, aligned with the image's bottom edge */
+    .card:has(> .publication-media-link)>.card__links {
+      position: static;
+      grid-column: 2;
+      grid-row: 4;
+      align-self: end;
+      gap: 0.75rem;
+      justify-content: flex-start;
+      margin-top: 0.85rem;
+    }
+
+    .card:has(> .publication-media-link)>.card__summary {
       grid-column: 1 / -1;
+      grid-row: 5;
     }
 
     @media (max-width: 768px) {
@@ -89,7 +279,7 @@
         display: block;
       }
 
-      .card:has(> .publication-media-link) > .publication-media-link {
+      .card:has(> .publication-media-link)>.publication-media-link {
         margin-top: 0.75rem;
       }
     }
@@ -107,6 +297,10 @@
         <a href="index.html" class="navbar__link">Home</a>
         <a href="research.html" class="navbar__link navbar__link--active">Research</a>
         <a href="development.html" class="navbar__link">Development</a>
+        <!--
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="personal.html" class="navbar__link">Personal</a>
+        -->
       </div>
 
       <div class="navbar__actions">
@@ -137,8 +331,8 @@
         <div class="section__header reveal">
           <h2 class="section__title">
             <span class="icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                 <polyline points="14 2 14 8 20 8" />
                 <line x1="16" x2="8" y1="13" y2="13" />
@@ -161,7 +355,7 @@
             </h3>
 
             <p class="card__authors">
-              Anuj Tiwari, Oluwapelumi Ogunremu, Terry Oko-odion, and 2 Others
+              <strong class="author-me">Anuj Tiwari</strong>, Oluwapelumi Ogunremu, Terry Oko-odion, and 2 Others
             </p>
 
             <p class="card__venue">AfricaNLP Workshop, EACL'26</p>
@@ -173,13 +367,13 @@
                 Gist
               </button>
 
-              <a href="https://arxiv.org/abs/2606.03219"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+              <a href="https://arxiv.org/abs/2606.03219" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
                 arXiv
               </a>
 
-              <a href="https://youtu.be/walYsbmC-os"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtu.be/walYsbmC-os" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
                 Video
               </a>
 
@@ -187,11 +381,8 @@
 
             <a class="publication-media-link" href="assets/2606.03219v1-thumbnail.jpg" target="_blank"
               rel="noopener noreferrer" title="View full-resolution visual summary">
-              <img
-                class="publication-thumbnail"
-                src="assets/2606.03219v1-thumbnail.jpg"
-                alt="Visual summary of Sample-Size Scaling of the African Languages NLI Evaluation"
-                loading="lazy">
+              <img class="publication-thumbnail" src="assets/2606.03219v1-thumbnail.jpg"
+                alt="Visual summary of Sample-Size Scaling of the African Languages NLI Evaluation" loading="lazy">
             </a>
 
             <div class="card__summary"
@@ -211,7 +402,7 @@
             </h3>
 
             <p class="card__authors">
-              Anuj Tiwari, Terry Oko-odion, and Hannah Nwokocha
+              <strong class="author-me">Anuj Tiwari</strong>, Terry Oko-odion, and Hannah Nwokocha
             </p>
 
             <p class="card__venue">RAIL Workshop, LREC'26</p>
@@ -223,13 +414,13 @@
                 Gist
               </button>
 
-              <a href="https://arxiv.org/abs/2606.03304"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+              <a href="https://arxiv.org/abs/2606.03304" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
                 arXiv
               </a>
 
-              <a href="https://youtu.be/kbuU14987Yg"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtu.be/kbuU14987Yg" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
                 Video
               </a>
 
@@ -237,11 +428,8 @@
 
             <a class="publication-media-link" href="assets/2606.03304v1-thumbnail.jpg" target="_blank"
               rel="noopener noreferrer" title="View full-resolution visual summary">
-              <img
-                class="publication-thumbnail"
-                src="assets/2606.03304v1-thumbnail.jpg"
-                alt="Research overview of prompting strategies for African NLI"
-                loading="lazy">
+              <img class="publication-thumbnail" src="assets/2606.03304v1-thumbnail.jpg"
+                alt="Research overview of prompting strategies for African NLI" loading="lazy">
             </a>
 
             <div class="card__summary"
@@ -262,7 +450,7 @@
             </h3>
 
             <p class="card__authors">
-              Pritam Kadasi†, Anuj Tiwari†, and Mayank Singh
+              Pritam Kadasi†, <strong class="author-me">Anuj Tiwari</strong>†, and Mayank Singh
             </p>
 
             <p class="card__venue">SemEval Workshop, ACL'26</p>
@@ -274,13 +462,12 @@
                 Gist
               </button>
 
-              <a href="https://arxiv.org/abs/2606.03334"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+              <a href="https://arxiv.org/abs/2606.03334" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
                 arXiv
               </a>
 
-              <button type="button" id="poster-btn"
-                class="btn btn--sm btn--outline"
+              <button type="button" id="poster-btn" class="btn btn--sm btn--outline"
                 data-pdf="assets/SemEval_Poster.pdf">
                 Poster
               </button>
@@ -289,11 +476,8 @@
 
             <a class="publication-media-link" href="assets/2606.03334v1-thumbnail.png" target="_blank"
               rel="noopener noreferrer" title="View full-resolution visual summary">
-              <img
-                class="publication-thumbnail"
-                src="assets/2606.03334v1-thumbnail.png"
-                alt="Research overview of prompt variants for polarization detection"
-                loading="lazy">
+              <img class="publication-thumbnail" src="assets/2606.03334v1-thumbnail.png"
+                alt="Research overview of prompt variants for polarization detection" loading="lazy">
             </a>
 
             <div class="card__summary"
@@ -312,10 +496,12 @@
               Chapter: Case Studies in Data-Driven Sports Medicine
             </h3>
 
-            <p class="card__authors">Anuj Tiwari</p>
+            <p class="card__authors">
+              <strong class="author-me">Anuj Tiwari</strong>
+            </p>
 
             <p class="card__venue">
-              Data-Driven Sports Medicine Book, Wiley Scrivener Publishing
+              Data-Driven Sports Medicine Book, Wiley
             </p>
 
             <div class="card__links">
@@ -331,6 +517,12 @@
               </a>
 
             </div>
+
+            <a class="publication-media-link" href="assets/data-driven_book-chapter_thumnail.jpg" target="_blank"
+              rel="noopener noreferrer" title="View full-resolution visual summary">
+              <img class="publication-thumbnail" src="assets/data-driven_book-chapter_thumnail.jpg"
+                alt="Visual summary of Case Studies in Data-Driven Sports Medicine" loading="lazy">
+            </a>
 
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
@@ -350,9 +542,10 @@
         <div class="section__header reveal">
           <h2 class="section__title">
             <span class="icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
                 <path d="M8.5 2h7" />
                 <path d="M7 16.5h10" />
               </svg>
@@ -465,8 +658,8 @@
         <div class="section__header reveal">
           <h2 class="section__title">
             <span class="icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
                 <path d="M12 11h4" />
@@ -524,9 +717,10 @@
         <div class="section__header reveal">
           <h2 class="section__title">
             <span class="icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
                 </path>
               </svg>
             </span>
@@ -543,8 +737,7 @@
             <div class="recommendation-header">
 
               <div class="recommendation-avatar">
-                <img src="assets/pritam.jpg" alt="Pritam Kadasi"
-                  style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/pritam.jpg" alt="Pritam Kadasi" style="width:100%; height:100%; object-fit:cover;">
               </div>
 
               <div class="recommendation-info">
@@ -552,8 +745,7 @@
                 <div class="recommendation-name">
                   Pritam Kadasi
 
-                  <a href="https://pskadasi.github.io/" target="_blank"
-                    class="btn btn--sm btn--outline"
+                  <a href="https://pskadasi.github.io/" target="_blank" class="btn btn--sm btn--outline"
                     style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
                     Profile
                   </a>
@@ -586,8 +778,7 @@
             <div class="recommendation-header">
 
               <div class="recommendation-avatar">
-                <img src="assets/terry.jpg" alt="Terry Oko-odion"
-                  style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/terry.jpg" alt="Terry Oko-odion" style="width:100%; height:100%; object-fit:cover;">
               </div>
 
               <div class="recommendation-info">
@@ -595,8 +786,7 @@
                 <div class="recommendation-name">
                   Terry Oko-odion
 
-                  <a href="https://terryoko.github.io/" target="_blank"
-                    class="btn btn--sm btn--outline"
+                  <a href="https://terryoko.github.io/" target="_blank" class="btn btn--sm btn--outline"
                     style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
                     Profile
                   </a>
@@ -644,12 +834,10 @@
 
           <div class="pdf-modal__actions">
 
-            <a id="pdf-modal-external" href="assets/SemEval_Poster.pdf"
-              target="_blank" class="btn btn--sm btn--outline"
+            <a id="pdf-modal-external" href="assets/SemEval_Poster.pdf" target="_blank" class="btn btn--sm btn--outline"
               title="Open in new tab">
 
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2"
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
@@ -658,11 +846,9 @@
 
             </a>
 
-            <button type="button" class="pdf-modal__close"
-              id="pdf-modal-close" aria-label="Close PDF viewer">
+            <button type="button" class="pdf-modal__close" id="pdf-modal-close" aria-label="Close PDF viewer">
 
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2"
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -674,8 +860,7 @@
         </div>
 
         <div class="pdf-modal__body">
-          <iframe id="pdf-modal-iframe"
-            class="pdf-modal__iframe" title="PDF Viewer"></iframe>
+          <iframe id="pdf-modal-iframe" class="pdf-modal__iframe" title="PDF Viewer"></iframe>
         </div>
 
       </div>
@@ -693,21 +878,18 @@
 
         <div class="footer__socials">
 
-          <a href="https://huggingface.co/aj11anuj" target="_blank"
-            class="footer__social-link" aria-label="Hugging Face"
-            title="Hugging Face">
+          <a href="https://x.com/aj11anuj" target="_blank" class="footer__social-link" aria-label="X / Twitter"
+            title="X / Twitter">
 
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
-                d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642-.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624" />
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
 
           </a>
 
-
-          <a href="https://scholar.google.com/citations?user=Ax857YMAAAAJ&hl=en"
-            target="_blank" class="footer__social-link"
-            aria-label="Google Scholar" title="Google Scholar">
+          <a href="https://scholar.google.com/citations?user=Ax857YMAAAAJ&hl=en" target="_blank"
+            class="footer__social-link" aria-label="Google Scholar" title="Google Scholar">
 
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -716,25 +898,12 @@
 
           </a>
 
-
-          <a href="https://github.com/aj11anuj" target="_blank"
-            class="footer__social-link" aria-label="GitHub" title="GitHub">
-
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653 3.285 2.38 3.285 3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653 3.285 2.38 3.285 3.176" />
-            </svg>
-
-          </a>
-
-
-          <a href="https://x.com/aj11anuj" target="_blank"
-            class="footer__social-link" aria-label="X / Twitter"
-            title="X / Twitter">
+          <a href="https://github.com/aj11anuj" target="_blank" class="footer__social-link" aria-label="GitHub"
+            title="GitHub">
 
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
             </svg>
 
           </a>
@@ -753,4 +922,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>

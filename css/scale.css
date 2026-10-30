@@ -1,0 +1,163 @@
+/* ===== Shared type scale (matches the Research page) ===== */
+
+/* Navbar */
+.navbar__brand {
+  font-size: 2.4rem;
+  /* Script font has only one weight, so thicken strokes with a text outline */
+  -webkit-text-stroke: 1px currentColor;
+}
+
+.navbar__link {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Footer */
+.footer__text {
+  font-size: 1rem;
+}
+
+.footer__social-link {
+  width: 44px;
+  height: 44px;
+}
+
+.footer__social-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Page header */
+.page-header__title {
+  font-size: 2rem;
+}
+
+.page-header__desc {
+  font-size: 1.05rem;
+  max-width: 640px;
+}
+
+/* Section titles */
+.section__title {
+  font-size: 1.15rem;
+}
+
+/* Cards: lighter background (dark theme), unchanged on hover */
+:root:not([data-theme="light"]) .card,
+:root:not([data-theme="light"]) .recommendation-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .card:hover {
+  background: var(--bg-card);
+}
+
+.card__title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.card__authors,
+.card__venue {
+  font-size: 0.95rem;
+}
+
+.card__authors {
+  color: var(--text-secondary);
+}
+
+.card__desc,
+.card__desc ul li,
+.card__summary {
+  font-size: 0.95rem !important;
+}
+
+.card__links .btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+}
+
+.cards-grid--1 .card__title,
+.cards-grid--1 .card__authors,
+.cards-grid--1 .card__venue {
+  padding-right: 290px;
+}
+
+@media (max-width: 768px) {
+  .cards-grid--1 .card__title,
+  .cards-grid--1 .card__authors,
+  .cards-grid--1 .card__venue {
+    padding-right: 0;
+  }
+}
+
+/* Home page */
+.academic-profile__heading {
+  font-size: 1.35rem;
+}
+
+.academic-profile__content p,
+.academic-profile__list li,
+.academic-profile__interests,
+.academic-profile__currently p {
+  font-size: 1.05rem;
+}
+
+.academic-profile__meta {
+  font-size: 1rem;
+}
+
+/* Development page: compact experience cards */
+.card.cncf-compact .exp-group__org {
+  font-size: 1.2rem !important;
+}
+
+.card.cncf-compact .exp-role__date {
+  font-size: 0.9rem !important;
+}
+
+.card.cncf-compact .exp-role__desc,
+.card.cncf-compact .exp-role__highlight-title,
+.card.cncf-compact .exp-role__list li {
+  font-size: 0.95rem !important;
+}
+/* Wide navbar across all pages + wide home layout */
+@media (min-width: 951px) {
+  .navbar__inner {
+    max-width: 1440px !important;
+    width: 92% !important;
+  }
+
+  .page-home .academic-profile__grid {
+    max-width: 1440px !important;
+    width: 92% !important;
+  }
+
+  .page-home .academic-profile__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 48px !important;
+  }
+
+  .page-home .profile-media {
+    width: 100% !important;
+    max-width: 318px !important;
+  }
+}
+/* Education inline meta styling (matches WORK entries after comma) */
+.academic-profile__item .academic-profile__meta-inline {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+/* Keep the prompt text white when hovering over the personal section button */
+.page-home a.academic-profile__button:hover .personal-btn__prompt,
+.page-home a.academic-profile__button:hover span:first-child {
+  color: var(--text-primary) !important;
+}
+/* Remove artificial 100vh on main so footer sits naturally below content */
+main {
+  min-height: auto !important;
+}
+
+.page-home .academic-profile {
+  padding-bottom: 1.5rem !important;
+}
