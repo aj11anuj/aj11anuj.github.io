@@ -20,16 +20,14 @@
     /* Publication thumbnails */
     .publication-thumbnail {
       display: block;
-      width: auto;
-      max-width: 100%;
-      height: 220px;
+      width: 100%;
+      height: auto;
       object-fit: contain;
       object-position: center;
       background: #ffffff;
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 10px;
-      margin-top: 0.85rem;
-      margin-bottom: 0.75rem;
+      margin: 0;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
       transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
       cursor: zoom-in;
@@ -46,7 +44,7 @@
     }
 
     .publication-media-link {
-      display: inline-block;
+      display: block;
       text-decoration: none;
       outline: none;
       border-radius: 10px;
@@ -57,11 +55,42 @@
       outline-offset: 2px;
     }
 
+    /* Same width as the home page grid */
+    .container {
+      max-width: 1200px;
+    }
+
+    /* Publication card: image on the left, text on the right */
+    .card:has(> .publication-media-link) {
+      display: grid;
+      grid-template-columns: minmax(300px, 46%) 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      column-gap: 1.75rem;
+      align-items: start;
+    }
+
+    .card:has(> .publication-media-link) > .publication-media-link {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+    }
+
+    .card:has(> .publication-media-link) > .card__title,
+    .card:has(> .publication-media-link) > .card__authors,
+    .card:has(> .publication-media-link) > .card__venue {
+      grid-column: 2;
+    }
+
+    .card:has(> .publication-media-link) > .card__summary {
+      grid-column: 1 / -1;
+    }
+
     @media (max-width: 768px) {
-      .publication-thumbnail {
-        height: 160px;
+      .card:has(> .publication-media-link) {
+        display: block;
+      }
+
+      .card:has(> .publication-media-link) > .publication-media-link {
         margin-top: 0.75rem;
-        margin-bottom: 0.5rem;
       }
     }
   </style>
