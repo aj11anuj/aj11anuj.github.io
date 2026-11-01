@@ -174,3 +174,11 @@ main {
 .footer__socials {
   gap: 0.9rem;
 }
+
+
+/* Desktop/laptop default: render at an effective 90% scale so the home columns align at 100% browser zoom */
+@media (min-width: 1000px) {
+  html {
+    zoom: 0.9;
+  }
+}
