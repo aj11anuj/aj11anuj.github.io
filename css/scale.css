@@ -175,10 +175,16 @@ main {
   gap: 0.9rem;
 }
 
+/* Scale the whole page with the screen width, like browser zoom, so it fits each display */
+html {
+  font-size: clamp(14px, 1.2vw, 20px);
+}
 
-/* Desktop/laptop default: render at an effective 90% scale so the home columns align at 100% browser zoom */
-@media (min-width: 1000px) {
-  html {
-    zoom: 0.9;
+
+/* Keep column headings on a single line (desktop) */
+@media (min-width: 900px) {
+  .academic-profile__heading {
+    white-space: nowrap;
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
   }
 }
