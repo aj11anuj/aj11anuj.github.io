@@ -24,8 +24,8 @@
       height: auto;
       object-fit: contain;
       object-position: center;
-      background: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: transparent; /* was #ffffff */
+      border: none; /* was 1px solid rgba(255, 255, 255, 0.12) */
       border-radius: 10px;
       margin: 0;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
@@ -511,9 +511,14 @@
                 Gist
               </button>
 
-              <a href="https://www.wiley.com/en-us/shop/general-introductory-statistics/data-driven-sports-medicine-p-9781394486441"
+              <a href="https://www.wiley.com/en-us/shop/general-introductory-statistics/data-driven-sports-medicine-deep-learning-insights-with-blockchain-trust-p-9781394486441"
                 class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
-                View
+                Buy Book
+              </a>
+
+              <a href="https://books.google.co.in/books?hl=en&amp;lr=&amp;id=-dkaEgAAQBAJ&amp;oi=fnd&amp;pg=PA395&amp;dq=info:5i8pPhafaXEJ:scholar.google.com&amp;ots=3E26cf8-KH&amp;sig=sH9sfffqnhg1jO77h0r4W706_6A&amp;redir_esc=y#v=onepage&amp;q&amp;f=false"
+                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
+                Preview
               </a>
 
             </div>
@@ -562,7 +567,7 @@
             <h3 class="card__title">ZULFE: Cultural Dimensions of Indian Hairstyles</h3>
 
             <p class="card__authors"><strong class="author-me">Anuj Tiwari</strong></p>
-            <p class="card__venue">Preprint</p>
+            <p class="card__venue">Dataset Paper, Preprint</p>
 
             <div class="card__links">
 
@@ -599,14 +604,13 @@
 
 
 
+
           <div class="card card--accent-purple reveal" data-category="artifact">
 
-            <h3 class="card__title">
-              Benchmarking Gemma-3 Series Models on EMMA-mini for Multimodal Reasoning
-            </h3>
+            <h3 class="card__title">BITE-PREF: Campus Food Habits and Delivery Preferences</h3>
 
-            <p class="card__authors">Anuj Tiwari</p>
-            <p class="card__venue">Code</p>
+            <p class="card__authors"><strong class="author-me">Anuj Tiwari</strong> and Adeeba Irfan</p>
+            <p class="card__venue">Dataset Paper, Preprint</p>
 
             <div class="card__links">
 
@@ -615,42 +619,23 @@
                 Gist
               </button>
 
-              <a href="https://www.researchgate.net/publication/396245316_Benchmarking_Gemma-3_Series_Models_on_EMMA-mini_Coding_Tasks_for_Evaluation_of_Multimodal_Reasoning_Capabilities"
+              <!-- TODO: replace "#" with the arXiv link once available -->
+              <a href="#" class="btn btn--sm btn--outline" onclick="return false;">
+                arXiv
+              </a>
+
+              <a href="https://huggingface.co/datasets/aj11anuj/bite-pref"
                 class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
-                View
+                Dataset
               </a>
 
             </div>
 
-            <div class="card__summary"
-              style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
-              An extensive benchmarking study evaluating the latest Gemma-3 series models against the EMMA-mini dataset
-              to assess their capabilities and limitations in complex multimodal reasoning tasks.
-            </div>
-
-          </div>
-
-
-          <div class="card card--accent-purple reveal" data-category="artifact">
-
-            <h3 class="card__title">Campus Food Habits & Delivery Preferences</h3>
-
-            <p class="card__authors">Anuj Tiwari and Adeeba Irfan</p>
-            <p class="card__venue">Dataset</p>
-
-            <div class="card__links">
-
-              <button class="btn btn--sm btn--outline"
-                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
-                Gist
-              </button>
-
-              <a href="https://www.researchgate.net/publication/396813714_Campus_Food_Habits_Delivery_Preferences"
-                class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer">
-                View
-              </a>
-
-            </div>
+            <a class="publication-media-link" href="assets/campus-food-habits-thumbnail.jpg" target="_blank"
+              rel="noopener noreferrer" title="View full-resolution visual summary">
+              <img class="publication-thumbnail" src="assets/campus-food-habits-thumbnail.jpg"
+                alt="Visual summary of BITE-PREF: Campus Food Habits and Delivery Preferences" loading="lazy">
+            </a>
 
             <div class="card__summary"
               style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border-color); line-height: 1.6; clear: both;">
