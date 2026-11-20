@@ -14,8 +14,108 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=1.3">
-  <link rel="stylesheet" href="css/scale.css?v=2.5">
+  <link rel="stylesheet" href="css/style.css?v=1.4">
+  <link rel="stylesheet" href="css/scale.css?v=2.6">
+  <style>
+    /* About column: photo (original size) with the intro beside it */
+    .about-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 6px;
+    }
+
+    .about-row .academic-profile__photo {
+      flex: 0 0 auto;
+      width: 280px;
+      max-width: 50%;
+      margin: 0 !important;
+    }
+
+    .about-row .academic-profile__photo .profile-media {
+      width: 100% !important;
+      max-width: 280px !important;
+    }
+
+    .about-row .about-location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .about-row .about-location svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .about-row .academic-profile__content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-row .academic-profile__content p {
+      text-align: justify;
+      hyphens: none;
+      line-height: 1.85;
+      letter-spacing: 0.005em;
+    }
+
+    .about-row .about-intro {
+      color: var(--text-primary);
+      opacity: 0.88;
+      margin: 0 0 1.25rem !important;
+    }
+
+    .about-row .about-open {
+      color: var(--text-primary);
+      opacity: 0.88;
+      margin: 0 !important;
+    }
+
+    @media (max-width: 700px) {
+      .about-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-row .academic-profile__photo {
+        max-width: 318px;
+        width: 100%;
+      }
+    }
+
+    /* 2D Diorama Preview Strip */
+    .diorama-stack {
+      margin-top: 1.5rem;
+      padding: 0 6px;
+    }
+
+    .diorama-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      background: #060911;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+      transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .diorama-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+    }
+
+    .diorama-canvas {
+      display: block;
+      width: 100%;
+      height: 245px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body class="page-home">
@@ -61,21 +161,39 @@
              ABOUT (Column 1)
              ========================= -->
         <div class="academic-profile__column">
-          <div class="academic-profile__photo" style="margin-bottom: 1.15rem;">
-            <img src="D.jpg" alt="Anuj Tiwari" onerror="this.style.background='var(--accent-dim)'" class="profile-media"
-              style="border-radius: var(--radius-md); border: 2px solid var(--border-color);">
+          <div class="about-row">
+            <div class="academic-profile__photo" style="margin-bottom: 1.15rem;">
+              <img src="D.jpg" alt="Anuj Tiwari" onerror="this.style.background='var(--accent-dim)'" class="profile-media"
+                style="border-radius: var(--radius-md); border: 2px solid var(--border-color);">
+              <div class="about-location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Delhi NCR, India</span>
+              </div>
+            </div>
+
+            <div class="academic-profile__content">
+              <p class="about-intro">
+                I am interested in building and studying human-centered multilingual, multimodal systems. Rather than
+                relying solely on LLM, CV, or Interpretability heavy methods, I want to talk with diverse speakers and
+                combine qualitative human research with multimodal AI to capture how cultural context, gestures, and
+                spoken nuances work in real life.
+              </p>
+              <p class="about-open">
+                Open to collaborations, PhD positions, and research roles at the
+                intersection of language technologies, multimodal systems, and HCI.
+              </p>
+            </div>
           </div>
 
-          <div class="academic-profile__content">
-            <p style="text-align: justify; margin-bottom: 10px;">
-              I am interested in building and studying human-centered multilingual, multimodal systems. Rather than
-              relying solely on LLM, CV, or Interpretability heavy methods, I want to talk with diverse speakers and
-              combine qualitative human research with multimodal AI to capture how cultural context, gestures, and
-              spoken nuances work in real life.<br><br>
-
-              Open to collaborations, PhD positions, and research roles at the
-              intersection of language technologies, multimodal systems, and HCI.
-            </p>
+          <!-- 2D Animated Midnight Metro Diorama -->
+          <div class="diorama-stack">
+            <div class="diorama-card">
+              <canvas id="scene-metro" class="diorama-canvas"></canvas>
+            </div>
           </div>
         </div>
 
@@ -176,7 +294,6 @@
             </li>
           </ul>
 
-
         </div>
 
       </div>
@@ -229,6 +346,7 @@
 
 
   <script src="js/main.js"></script>
+  <script src="js/dioramas.js?v=2.0"></script>
 
 </body>
 

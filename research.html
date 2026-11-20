@@ -319,35 +319,6 @@
   <main>
     <div class="container">
 
-      <!-- =====================================================
-           DUMPED FROM INDEX.HTML (Open Research Initiative col)
-           ===================================================== -->
-      <!--
-      <div class="academic-profile__column" style="margin-bottom: 2rem;">
-        <h2 class="academic-profile__heading">OPEN RESEARCH INITIATIVE</h2>
-        <div class="academic-profile__content" style="text-align: justify;">
-          <p style="margin-bottom: 5px;">
-            <strong style="color: var(--accent, #f4b942);">NewsNLI Dataset</strong>
-          </p>
-          <p>
-            Currently building NewsNLI, a large-scale multilingual Natural Language Inference (NLI) dataset designed
-            to advance reasoning capabilities across diverse languages.
-          </p>
-          <p style="margin-bottom: 10px;">
-            Rather than simply scaling the number of examples, this initiative focuses on reasoning quality and
-            cultural authenticity. We are collecting annotations directly from native speakers across 8 languages
-            (Text &amp; Audio), who not only validate semantic relationships but also provide spoken reasoning
-            explaining their decisions.
-          </p>
-        </div>
-        <a href="https://aj11anuj.github.io/newsnli-site/" target="_blank" rel="noopener"
-          class="academic-profile__button"
-          style="color: var(--accent, #f4b942); font-size: 0.8rem; padding: 10px 16px; margin-top: 0;">View project
-          site</a>
-      </div>
-      -->
-      <!-- END DUMP -->
-
       <div class="page-header reveal">
         <h1 class="page-header__title">Research</h1>
         <p class="page-header__desc">
@@ -355,6 +326,63 @@
           multilingual NLP and multimodal systems.
         </p>
       </div>
+
+      <!-- Work in Progress -->
+      <section class="section" id="work-in-progress">
+
+        <div class="section__header reveal">
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+              </svg>
+            </span>
+            Work in Progress
+          </h2>
+          <div class="section__divider"></div>
+        </div>
+
+        <div class="cards-grid cards-grid--1">
+          <div class="card card--accent-gold reveal" data-category="wip">
+
+            <h3 class="card__title">
+              NewsNLI: A Large-Scale Multilingual NLI Dataset with Native Spoken Reasoning
+            </h3>
+
+            <p class="card__authors">
+              <strong class="author-me">Anuj Tiwari</strong> et al.
+            </p>
+
+            <p class="card__venue">Open Research Initiative</p>
+
+            <div class="card__links">
+
+              <button class="btn btn--sm btn--outline"
+                onclick="const s = this.closest('.card').querySelector('.card__summary'); s.style.display = s.style.display === 'none' ? 'block' : 'none';">
+                Gist
+              </button>
+
+              <a href="https://aj11anuj.github.io/newsnli-site/" class="btn btn--sm btn--outline" target="_blank"
+                rel="noopener noreferrer">
+                Project Site
+              </a>
+
+            </div>
+
+            <div class="card__summary"
+              style="display: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); line-height: 1.65; clear: both;">
+              Currently building NewsNLI, a large-scale multilingual Natural Language Inference (NLI) dataset designed
+              to advance reasoning capabilities across diverse languages. Rather than simply scaling the number of
+              examples, this initiative focuses on reasoning quality and cultural authenticity by collecting annotations
+              directly from native speakers across 10 languages (Text &amp; Audio), who not only validate semantic
+              relationships but also provide spoken reasoning explaining their decisions.
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       <!-- Publications -->
       <section class="section" id="publications">
@@ -364,11 +392,8 @@
             <span class="icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" x2="8" y1="13" y2="13" />
-                <line x1="16" x2="8" y1="17" y2="17" />
-                <polyline points="10 9 9 9 8 9" />
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
             </span>
             Publications
@@ -581,10 +606,9 @@
             <span class="icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
-                <path d="M8.5 2h7" />
-                <path d="M7 16.5h10" />
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                <path d="M3 12A9 3 0 0 0 21 12" />
               </svg>
             </span>
             Research Artifacts
@@ -679,12 +703,8 @@
             <span class="icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                <path d="M12 11h4" />
-                <path d="M12 16h4" />
-                <path d="M8 11h.01" />
-                <path d="M8 16h.01" />
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                <path d="m9 12 2 2 4-4" />
               </svg>
             </span>
             Academic Services
@@ -738,9 +758,8 @@
             <span class="icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
-                </path>
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
               </svg>
             </span>
             Recommendations

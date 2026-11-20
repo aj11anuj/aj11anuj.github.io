@@ -134,7 +134,7 @@
   }
 
   .page-home .academic-profile__grid {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: 2fr 1fr !important;
     gap: 48px !important;
   }
 
