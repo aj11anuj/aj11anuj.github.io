@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" width="1672" height="941">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090e17"/>
+      <stop offset="1" stop-color="#141e36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fcba28" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#fcba28" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1672" height="941" fill="url(#bg)"/>
+  <circle cx="836" cy="470" r="420" fill="url(#glow)"/>
+
+  <g transform="translate(0,70)">
+  <!-- Header -->
+  <text x="836" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="700" fill="#ffffff">NewsNLI</text>
+  <text x="836" y="185" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#8598b0">Multilingual NLI with native spoken reasoning</text>
+
+  <!-- Premise -> Hypothesis -> Label flow -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="130" y="290" width="400" height="190" rx="22" fill="#111622" stroke="#fcba28" stroke-opacity="0.45" stroke-width="3"/>
+    <text x="330" y="338" text-anchor="middle" font-size="26" font-weight="600" fill="#fcba28" letter-spacing="3">PREMISE</text>
+    <text x="330" y="395" text-anchor="middle" font-size="30" fill="#e2e8f0">News headline</text>
+    <text x="330" y="438" text-anchor="middle" font-size="24" fill="#8598b0">in a native language</text>
+
+    <rect x="636" y="290" width="400" height="190" rx="22" fill="#111622" stroke="#fcba28" stroke-opacity="0.45" stroke-width="3"/>
+    <text x="836" y="338" text-anchor="middle" font-size="26" font-weight="600" fill="#fcba28" letter-spacing="3">HYPOTHESIS</text>
+    <text x="836" y="395" text-anchor="middle" font-size="30" fill="#e2e8f0">Candidate claim</text>
+    <text x="836" y="438" text-anchor="middle" font-size="24" fill="#8598b0">to be judged</text>
+
+    <rect x="1142" y="290" width="400" height="190" rx="22" fill="#111622" stroke="#fcba28" stroke-opacity="0.45" stroke-width="3"/>
+    <text x="1342" y="338" text-anchor="middle" font-size="26" font-weight="600" fill="#fcba28" letter-spacing="3">LABEL</text>
+    <text x="1342" y="395" text-anchor="middle" font-size="28" fill="#6a9e78">entailment</text>
+    <text x="1342" y="432" text-anchor="middle" font-size="28" fill="#c4956a">neutral</text>
+    <text x="1342" y="469" text-anchor="middle" font-size="28" fill="#9383b5">contradiction</text>
+
+    <path d="M540 385 H626 M1046 385 H1132" stroke="#fcba28" stroke-width="5" stroke-linecap="round"/>
+    <path d="M610 368 L630 385 L610 402 M1116 368 L1136 385 L1116 402" fill="none" stroke="#fcba28" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Spoken reasoning waveform -->
+  <g>
+    <rect x="130" y="560" width="1412" height="150" rx="22" fill="#111622" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+    <text x="170" y="612" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" fill="#fcba28" letter-spacing="3">SPOKEN REASONING · NATIVE SPEAKERS</text>
+    <g fill="#fcba28" opacity="0.85">
+      <rect x="170" y="650" width="8" height="30" rx="4"/><rect x="194" y="640" width="8" height="50" rx="4"/><rect x="218" y="630" width="8" height="70" rx="4"/>
+      <rect x="242" y="645" width="8" height="40" rx="4"/><rect x="266" y="635" width="8" height="60" rx="4"/><rect x="290" y="650" width="8" height="30" rx="4"/>
+      <rect x="314" y="638" width="8" height="54" rx="4"/><rect x="338" y="628" width="8" height="74" rx="4"/><rect x="362" y="644" width="8" height="42" rx="4"/>
+      <rect x="386" y="652" width="8" height="26" rx="4"/><rect x="410" y="636" width="8" height="58" rx="4"/><rect x="434" y="646" width="8" height="38" rx="4"/>
+      <rect x="458" y="630" width="8" height="70" rx="4"/><rect x="482" y="642" width="8" height="46" rx="4"/><rect x="506" y="652" width="8" height="26" rx="4"/>
+      <rect x="530" y="636" width="8" height="58" rx="4"/><rect x="554" y="646" width="8" height="38" rx="4"/><rect x="578" y="632" width="8" height="66" rx="4"/>
+      <rect x="602" y="644" width="8" height="42" rx="4"/><rect x="626" y="652" width="8" height="26" rx="4"/>
+    </g>
+    <g font-family="Inter, Arial, sans-serif" font-size="30" fill="#e2e8f0">
+      <text x="700" y="680">हिन्दी</text>
+      <text x="820" y="680">ਪੰਜਾਬੀ</text>
+      <text x="950" y="680">Yorùbá</text>
+      <text x="1090" y="680">Hausa</text>
+      <text x="1200" y="680">Igbo</text>
+      <text x="1290" y="680">Kiswahili</text>
+      <text x="1440" y="680" fill="#8598b0">+ more</text>
+    </g>
+  </g>
+
+  </g>
+</svg>
