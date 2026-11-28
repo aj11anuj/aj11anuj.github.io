@@ -30,6 +30,18 @@
       height: 54px;
     }
 
+    .recommendation-avatar a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .recommendation-avatar a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -3px;
+      border-radius: 50%;
+    }
+
     .recommendation-name {
       font-size: 1.15rem;
     }
@@ -516,8 +528,11 @@
             <div class="recommendation-header">
 
               <div class="recommendation-avatar" style="background: #ffffff;">
-                <img src="assets/k8s-community-avatar.png" alt="Kubernetes Community Member"
-                  style="width:100%; height:100%; object-fit:contain; object-position:bottom; padding:4px 3px 0 3px;">
+                <a href="https://www.cncf.io/phippy/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Phippy.io logo by CNCF">
+                  <img src="assets/k8s-community-avatar.png" alt="Kubernetes Community Member"
+                    style="width:100%; height:100%; object-fit:contain; object-position:bottom; padding:4px 3px 0 3px;">
+                </a>
               </div>
 
               <div class="recommendation-info">
@@ -550,8 +565,11 @@
             <div class="recommendation-header">
 
               <div class="recommendation-avatar" style="background: #ffffff;">
-                <img src="assets/cncf-community-avatar.png" alt="Kubernetes Community Member"
-                  style="width:100%; height:100%; object-fit:contain; object-position:bottom; transform:translateY(9px) scale(1);">
+                <a href="https://www.cncf.io/phippy/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Phippy.io logo by CNCF">
+                  <img src="assets/cncf-community-avatar.png" alt="Kubernetes Community Member"
+                    style="width:100%; height:100%; object-fit:contain; object-position:bottom; transform:translateY(9px) scale(1);">
+                </a>
               </div>
 
               <div class="recommendation-info">
