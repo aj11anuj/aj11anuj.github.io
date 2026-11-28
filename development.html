@@ -19,6 +19,78 @@
     main>.container {
       max-width: 1040px;
     }
+
+    /* Community Appreciation (matched to Research Recommendations) */
+    .recommendation-card {
+      padding: 1.5rem;
+    }
+
+    .recommendation-avatar {
+      width: 54px;
+      height: 54px;
+    }
+
+    .recommendation-name {
+      font-size: 1.15rem;
+    }
+
+    .recommendation-title {
+      font-size: 0.95rem;
+    }
+
+    .recommendation-context {
+      font-size: 0.9rem;
+    }
+
+    .recommendation-text {
+      font-size: 0.95rem !important;
+    }
+
+    /* Compact vertical chat inside appreciation card */
+    .chat-thread {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 0.25rem;
+    }
+
+    .chat-msg {
+      max-width: 88%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      border: 1px solid var(--border-color);
+    }
+
+    .chat-msg--other {
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      border-bottom-left-radius: 3px;
+    }
+
+    .chat-msg--me {
+      align-self: flex-end;
+      background: var(--accent-dim);
+      border-color: var(--accent-border);
+      color: var(--text-primary);
+      border-bottom-right-radius: 3px;
+    }
+
+    .chat-msg__sender {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+      color: var(--text-muted);
+    }
+
+    .chat-msg--me .chat-msg__sender {
+      color: var(--accent);
+    }
   </style>
 </head>
 
@@ -414,6 +486,114 @@
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <!-- Community Appreciation -->
+      <section class="section" id="community-appreciation">
+
+        <div class="section__header reveal">
+          <h2 class="section__title">
+            <span class="icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                <path
+                  d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+              </svg>
+            </span>
+            Community Appreciation
+          </h2>
+          <div class="section__divider"></div>
+        </div>
+
+        <div class="recommendation-list reveal">
+
+          <!-- Appreciation 1 -->
+          <div class="recommendation-card">
+
+            <div class="recommendation-header">
+
+              <div class="recommendation-avatar" style="background: #ffffff;">
+                <img src="assets/k8s-community-avatar.png" alt="Kubernetes Community Member"
+                  style="width:100%; height:100%; object-fit:contain; object-position:bottom; padding:4px 3px 0 3px;">
+              </div>
+
+              <div class="recommendation-info">
+
+                <div class="recommendation-name">
+                  Kubernetes Community Member
+                </div>
+
+                <div class="recommendation-title">
+                  Role: Reviewer, SIG Docs Team at Kubernetes
+                </div>
+                <div class="recommendation-context">
+                  Context: During my active contribution period in K8s Community
+                </div>
+
+              </div>
+            </div>
+
+            <div class="recommendation-text">
+              "I've noticed your active involvement in the K8s community and active participation in issues triaging, PR
+              reviews, localization and discussions over calls and Slack. Keep up the great work! Keep growing and
+              contributing, you're doing an awesome job!"
+            </div>
+
+          </div>
+
+          <!-- Appreciation 2 — Chat Thread -->
+          <div class="recommendation-card">
+
+            <div class="recommendation-header">
+
+              <div class="recommendation-avatar" style="background: #ffffff;">
+                <img src="assets/cncf-community-avatar.png" alt="Kubernetes Community Member"
+                  style="width:100%; height:100%; object-fit:contain; object-position:bottom; transform:translateY(9px) scale(1);">
+              </div>
+
+              <div class="recommendation-info">
+
+                <div class="recommendation-name">
+                  Kubernetes Community Member
+                </div>
+
+                <div class="recommendation-title">
+                  Role: New Contributor
+                </div>
+
+                <div class="recommendation-context">
+                  Context: Mentoring &amp; onboarding on Kubernetes SIG Docs
+                </div>
+
+              </div>
+            </div>
+
+            <div class="recommendation-text">
+              <div class="chat-thread">
+
+                <div class="chat-msg chat-msg--other">
+                  <span class="chat-msg__sender">Contributor</span>
+                  Hello Anuj, I see you are doing good work at the Kubernetes community. I too have started to understand about it and contributing towards it but I can't find a proper way to understand the repository and contributing to it. I find so many issues too difficult to understand even. Can you please tell how you initially dealt with all these?
+                </div>
+
+                <div class="chat-msg chat-msg--me">
+                  <span class="chat-msg__sender">Anuj</span>
+                  <em>[Detailed walkthrough on repository structure &amp; Kubernetes SIG Docs onboarding]</em>
+                </div>
+
+                <div class="chat-msg chat-msg--other">
+                  <span class="chat-msg__sender">Contributor</span>
+                  When I wrote the message I didn't expect that I'll be getting so long explanation on my problem. You literally structured everything in my mind about the Kubernetes especially SIG Docs. Thanks for such a beautiful explanation. You are a gem 💎.
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
     </div>
